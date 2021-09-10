@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<include android:id="@+id/baseHeaderLayout" layout="@layout/toolbar" />-->
+    <androidx.appcompat.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="60dp"
+        android:elevation="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:background="@color/ic_launcher_background"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/img_LeftSideAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|left"
+            android:layout_marginEnd="@dimen/margin_Normal"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="ContentDescription,RtlHardcoded,VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/txt_HeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textSize_Large"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/img_RightSideAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:layout_marginEnd="@dimen/margin_Normal"
+            android:visibility="gone"
+            android:layout_gravity="end|right"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/base_activity_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical" />
+
+    <!--translationZ hack for action bar having elevation issues-->
+    <FrameLayout
+        android:id="@+id/base_activity_overlay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:translationZ="10dp"
+        android:visibility="gone"
+        android:focusable="true" />
+
+</RelativeLayout>

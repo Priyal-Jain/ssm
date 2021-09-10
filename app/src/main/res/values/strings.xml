@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Smart Student Management</string>
+    <string name="teacher">teacher</string>
+    <string name="vidhyabharti">Vidhyabharti School</string>
+    <string name="login">Login</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_email_hint">Email</string>
+    <string name="Annapurna">Annapurna</string>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
